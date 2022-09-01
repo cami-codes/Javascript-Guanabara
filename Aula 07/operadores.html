@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores em JavaScript</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+            text-align: center;
+            background-color: plum;
+        }
+        .lista {
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores Aritméticos</h1>
+    <p> + (soma) | - (subtração) | * (multiplicação)</p><br>
+    <p>/ (divisão) | % (resto da divisão) | ** (potência)</p><br>
+
+    <h2>Ordem de precedência</h2>
+    <ol class="lista">
+        <li>
+            ()
+        </li>
+        <li>
+            **
+        </li>
+        <li>
+            / %
+        </li>
+        <li>
+            + -
+        </li>
+    </ol>
+
+    <h3>Exemplos precedência</h3>
+    <script>
+        /**** Precedência ****/
+        var a = 5 + 3
+        document.write(`<strong>Var A: </strong> 5 + 3  = ${a} <br><br>`)
+
+        var b = a % 5
+        document.write(`<strong>Var B: </strong> A % 5 = ${b} <br><br>`)
+
+        var c = 5 * b ** 2
+        document.write(`<strong>Var C: </strong> 5 * <strong>B ** 2</strong> = ${c}<br><br>`)
+
+        var d = 10 - a / 2
+        document.write(`<strong>Var D: </strong> 10 - <strong>A / 2</strong> = ${d} <br><br>`)
+
+        var e = 6 * 2 / d
+        document.write(`<strong>Var E: </strong> <strong> 6 * 2 </strong> / d = ${e} <br><br>`)
+
+        var f = b % e + 4 / e
+        document.write(`<strong>Var E: B % E + 4 / E = </strong>${f} <br><br>`)
+        
+    </script>
+</body>
+</html>
