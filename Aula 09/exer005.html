@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    
+    <script>
+        var p1 = document.getElementsByTagName('p')[0] // verifica o índice, 0 sendo o primeiro paragrafo e [1] sendo o segundo
+        var p2 = document.getElementsByTagName('p')[1] 
+
+        var body = document.body
+
+        // window.document.write('Primeiro paragráfo: ' + p1.innerText) // innerText: texto q está dentro
+        // window.document.write('  Segundo paragráfo: ' + p2.innerText) 
+
+        // window.alert(p2.innerHTML)
+
+        document.write(p2.innerHTML)
+
+        // Também posso mudar o style
+        p1.style.color = 'red'
+        p2.style.color = 'blue'
+        body.style.background = 'white'
+        body.style.color = 'black'
+
+        // getElementByID
+        var div = window.document.getElementById('msg')
+        div.style.background = 'red'
+        div.innerText = 'Alterando o texto com o innerText'
+        // OU
+        document.getElementById('msg').innerText = 'Olá'
+
+        // por Seletor (querySelect)
+        var divQuerySelector = document.querySelector('div#msg')
+        divQuerySelector.style.color = 'blue'
+    </script>
+</body>
+</html>
